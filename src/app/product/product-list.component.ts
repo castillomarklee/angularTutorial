@@ -6,12 +6,15 @@ import { Component } from "@angular/core";
 })
 
 export class ProductListComponent {
+    showImage: boolean;
     pageTitle: string = 'Product List';
+    imageWidth: number = 50;
+    imageMargin: number = 2;
     products: any[] = [
         {
             "productId": 1,
             "productName": "Leaf Rake",
-            "productCode": "GDN-0011",
+            "productCode": "GDN-0011",  
             "releaseDate": "March 19, 2016",
             "description": "Leaf rake with 48-inch wooden handle.",
             "price": 19.95,
@@ -29,4 +32,8 @@ export class ProductListComponent {
             "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
         }
     ];
+
+    toggleImage(): void {
+      this.showImage = !this.showImage;
+    }
 }
