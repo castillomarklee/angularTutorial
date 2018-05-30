@@ -1,5 +1,6 @@
 <div class="container">
   <div class="row">
+    <button class="btn btn-primary" (click)='onBack()'>Back</button>
     <div class="panel panel-primary" *ngIf='product'>
       <div class="panel-heading">
         {{pageTitle + ': ' + product.productName}}
